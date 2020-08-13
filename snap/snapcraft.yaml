@@ -3,38 +3,38 @@ base: core20
 version: 'v3.9.1'
 summary: "Update dynamic DNS entries for accounts on dynamic DNS services."
 description: |
-Dynamic DNS services currently supported include:
+  Dynamic DNS services currently supported include:
 
-# DynDNS.com  - See http://www.dyndns.com for details on obtaining a free account.
-# Zoneedit    - See http://www.zoneedit.com for details.
-# EasyDNS     - See http://www.easydns.com for details.
-# NameCheap   - See http://www.namecheap.com for details
-# DslReports  - See http://www.dslreports.com for details
-# Sitelutions - See http://www.sitelutions.com for details
-# Loopia      - See http://www.loopia.se for details
-# Noip        - See http://www.noip.com/ for details
-# Freedns     - See http://freedns.afraid.org/ for details
-# ChangeIP    - See http://www.changeip.com/ for details
-# nsupdate    - See nsupdate(1) and ddns-confgen(8) for details
-# CloudFlare  - See https://www.cloudflare.com/ for details
-# Google      - See http://www.google.com/domains for details
-# Duckdns     - See https://duckdns.org/ for details
-# Freemyip    - See https://freemyip.com for details
-# woima.fi    - See https://woima.fi/ for details
-# Yandex      - See https://domain.yandex.com/ for details
-# DNS Made Easy - See https://dnsmadeeasy.com/ for details
-# DonDominio  - See https://www.dondominio.com for details
-# NearlyFreeSpeech.net - See https://www.nearlyfreespeech.net/services/dns for details
-# OVH         - See https://www.ovh.com for details
-# ClouDNS     - See https://www.cloudns.net
-# dinahosting - See https://dinahosting.com
-# Gandi       - See https://gandi.net
+  # DynDNS.com  - See http://www.dyndns.com for details on obtaining a free account.
+  # Zoneedit    - See http://www.zoneedit.com for details.
+  # EasyDNS     - See http://www.easydns.com for details.
+  # NameCheap   - See http://www.namecheap.com for details
+  # DslReports  - See http://www.dslreports.com for details
+  # Sitelutions - See http://www.sitelutions.com for details
+  # Loopia      - See http://www.loopia.se for details
+  # Noip        - See http://www.noip.com/ for details
+  # Freedns     - See http://freedns.afraid.org/ for details
+  # ChangeIP    - See http://www.changeip.com/ for details
+  # nsupdate    - See nsupdate(1) and ddns-confgen(8) for details
+  # CloudFlare  - See https://www.cloudflare.com/ for details
+  # Google      - See http://www.google.com/domains for details
+  # Duckdns     - See https://duckdns.org/ for details
+  # Freemyip    - See https://freemyip.com for details
+  # woima.fi    - See https://woima.fi/ for details
+  # Yandex      - See https://domain.yandex.com/ for details
+  # DNS Made Easy - See https://dnsmadeeasy.com/ for details
+  # DonDominio  - See https://www.dondominio.com for details
+  # NearlyFreeSpeech.net - See https://www.nearlyfreespeech.net/services/dns for details
+  # OVH         - See https://www.ovh.com for details
+  # ClouDNS     - See https://www.cloudns.net
+  # dinahosting - See https://dinahosting.com
+  # Gandi       - See https://gandi.net
 
-DDclient now supports many of cable/dsl broadband routers.
+  DDclient now supports many of cable/dsl broadband routers.
 
-Comments, suggestions and requests: use the issues on https://github.com/ddclient/ddclient/issues/new
+  Comments, suggestions and requests: use the issues on https://github.com/ddclient/ddclient/issues/new
 
-The code was originally written by Paul Burry and is now hosted and maintained through github.com. Please check out http://ddclient.net
+  The code was originally written by Paul Burry and is now hosted and maintained through github.com. Please check out http://ddclient.net
 grade: stable
 confinement: strict
 
