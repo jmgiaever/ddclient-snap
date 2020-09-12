@@ -65,7 +65,7 @@ layout:
 
 parts:
   ddclient:
-    plugin: nil
+    plugin: dump
     source: https://github.com/ddclient/ddclient.git
     source-tag: ${SNAPCRAFT_PROJECT_VERSION}
     stage-packages:
@@ -77,9 +77,6 @@ parts:
       - perl
       - perl-base
       - perl-modules
-    override-build: |
-      cp ${SNAPCRAFT_PART_BUILD}/ddclient ${SNAPCRAFT_PART_INSTALL}
-      snapcraftctl build
     organize:
       ddclient: bin/ddclient
     stage:
