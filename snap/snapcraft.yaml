@@ -5,8 +5,10 @@ summary: "Update dynamic DNS entries for accounts on dynamic DNS services."
 description: |
   Dynamic DNS services currently supported include: 
     - [services](https://github.com/ddclient/ddclient?tab=readme-ov-file#supported-services)
+  
   Comments, suggestions and requests: use the issues on https://github.com/ddclient/ddclient/issues/new
   The code was originally written by Paul Burry and is now hosted and maintained through github.com.
+
   Please check out http://ddclient.net
 grade: stable
 confinement: strict
