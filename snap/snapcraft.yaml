@@ -55,7 +55,7 @@ parts:
       - libhttp-daemon-perl
       - libhttp-daemon-ssl-perl
       - libhttp-message-perl
-      - libwww-perl
+        #- libwww-perl
         #- libdata-validate-ip-perl
         #- libio-socket-inet6-perl
         #- libio-socket-ssl-perl
