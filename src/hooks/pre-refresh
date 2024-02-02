@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -a "${SNAP_DATA}/etc/ddclient/ddclient.conf" ]; then
-    if [ -z "$(cat "${SNAP_DATA}/ddclient.conf" ]; then
+    if [ -z "$(cat "${SNAP_DATA}/ddclient.conf")" ]; then
         cat "${SNAP_DATA}/etc/ddclient/ddclient.conf" > "${SNAP_DATA}/ddclient.conf"
     fi
     rm -rf "${SNAP_DATA}/etc" "${SNAP_DATA}/var"
