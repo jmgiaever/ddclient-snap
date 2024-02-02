@@ -19,7 +19,7 @@ apps:
       LC_ALL: "C.UTF-8"
       PERL5LIB:  "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl-base/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl5/5.30/:$SNAP/usr/share/perl5/:$SNAP/usr/share/perl/5.30.0/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.30/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.30.0/"
       LD_LIBRARY_PATH: "$SNAP/usr/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio/:$LD_LIBRARY_PATH"
-    command: bin/ddclient --daemon 300 -foreground
+    command: usr/local/bin/ddclient --daemon 300 -foreground
     daemon: simple
     plugs:
       - network
@@ -28,7 +28,7 @@ apps:
       LC_ALL: "C.UTF-8"
       PERL5LIB:  "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl-base/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl5/5.30/:$SNAP/usr/share/perl5/:$SNAP/usr/share/perl/5.30.0/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.30/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.30.0/"
       LD_LIBRARY_PATH: "$SNAP/usr/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio/:$LD_LIBRARY_PATH"
-    command: bin/ddclient
+    command: usr/local/bin/ddclient
     plugs:
       - network
 
@@ -65,8 +65,12 @@ parts:
       - perl-base
       - perl-modules
       - curl
-    organize:
-      usr/local/bin/ddclient: bin/ddclient
+      #organize:
+        #usr/local/bin/ddclient: bin/ddclient
+    override-prime: |
+      echo "PART INSTaLL:${CRAFT_PART_INSTALL}"
+      sed -i "s#${CRAFT_PART_INSTALL}##" ${CRAFT_STAGE}/usr/local/bin/ddclient
+      snapcraftctl prime
   hooks:
     plugin: dump
     source: src/
