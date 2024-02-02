@@ -1,5 +1,5 @@
 name: ddclient-snap
-base: core20 
+base: core22
 version: 'v3.11.2'
 summary: "Update dynamic DNS entries for accounts on dynamic DNS services."
 description: |
@@ -43,15 +43,28 @@ parts:
     plugin: autotools
     source: https://github.com/ddclient/ddclient.git
     source-tag: ${SNAPCRAFT_PROJECT_VERSION}
+    build-packages:
+      - libplack-perl
+      - libhttp-daemon-perl
+      - libhttp-message-perl
+      - libhttp-daemon-ssl-perl
+      - libtest-mockmodule-perl
+      - libtest-warnings-perl
     stage-packages:
-      - libdata-validate-ip-perl
-      - libio-socket-inet6-perl
-      - libio-socket-ssl-perl
-      - libjson-pp-perl
-      - libsys-hostname-long-perl
+      - libplack-perl
+      - libhttp-daemon-perl
+      - libhttp-daemon-ssl-perl
+      - libhttp-message-perl
+      - libwww-perl
+        #- libdata-validate-ip-perl
+        #- libio-socket-inet6-perl
+        #- libio-socket-ssl-perl
+        #- libjson-pp-perl
+        # - libsys-hostname-long-perl
       - perl
       - perl-base
       - perl-modules
+      - curl
     organize:
       usr/local/bin/ddclient: bin/ddclient
   hooks:
