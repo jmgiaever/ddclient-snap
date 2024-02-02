@@ -58,3 +58,8 @@ parts:
       - usr/lib
       - usr/share
       - etc/perl
+  hooks:
+    plugin: dump
+    source: hooks/
+    organize:
+      hooks: snap/hooks
