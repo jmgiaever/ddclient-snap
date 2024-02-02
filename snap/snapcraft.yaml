@@ -60,6 +60,6 @@ parts:
       - etc/perl
   hooks:
     plugin: dump
-    source: hooks/
+    source: src/
     organize:
       hooks: snap/hooks
