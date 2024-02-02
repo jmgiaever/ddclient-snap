@@ -55,11 +55,11 @@ parts:
       - libhttp-daemon-perl
       - libhttp-daemon-ssl-perl
       - libhttp-message-perl
-        #- libwww-perl
-        #- libdata-validate-ip-perl
-        #- libio-socket-inet6-perl
-        #- libio-socket-ssl-perl
-        #- libjson-pp-perl
+      - libwww-perl
+      - libdata-validate-ip-perl
+      - libio-socket-inet6-perl
+      - libio-socket-ssl-perl
+      - libjson-pp-perl
       - libsys-hostname-long-perl
       - perl
       - perl-base
