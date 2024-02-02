@@ -33,14 +33,14 @@ apps:
       - network
 
 layout:
-  /etc/ddclient/ddclient.conf:
+  /usr/local/etc/ddclient/ddclient.conf:
     bind-file: $SNAP_DATA/ddclient.conf
-  /var/cache/ddclient/ddclient.cache:
+  /usr/local/var/cache/ddclient/ddclient.cache:
     bind-file: $SNAP_COMMON/ddclient.cache
 
 parts:
   ddclient:
-    plugin: dump
+    plugin: autotools
     source: https://github.com/ddclient/ddclient.git
     source-tag: ${SNAPCRAFT_PROJECT_VERSION}
     stage-packages:
@@ -53,13 +53,7 @@ parts:
       - perl-base
       - perl-modules
     organize:
-      ddclient: bin/ddclient
-    stage:
-      - bin/ddclient
-      - usr/bin
-      - usr/lib
-      - usr/share
-      - etc/perl
+      usr/local/bin/ddclient: bin/ddclient
   hooks:
     plugin: dump
     source: src/
