@@ -37,7 +37,7 @@ layout:
   /etc/ddclient/ddclient.conf:
     bind-file: $SNAP_DATA/ddclient.conf
   /var/cache/ddclient/ddclient.cache:
-    bind-file: $SNAP_COMMON/var/cache/ddclient/ddclient.cache
+    bind-file: $SNAP_COMMON/ddclient.cache
 
 parts:
   ddclient:
