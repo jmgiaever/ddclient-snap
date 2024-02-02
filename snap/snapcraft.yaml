@@ -60,7 +60,7 @@ parts:
         #- libio-socket-inet6-perl
         #- libio-socket-ssl-perl
         #- libjson-pp-perl
-        # - libsys-hostname-long-perl
+      - libsys-hostname-long-perl
       - perl
       - perl-base
       - perl-modules
