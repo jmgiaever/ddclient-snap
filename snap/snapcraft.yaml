@@ -71,8 +71,8 @@ parts:
       echo "PART INSTaLL:${CRAFT_PART_INSTALL}"
       sed -i "s#${CRAFT_PART_INSTALL}##" ${CRAFT_STAGE}/usr/local/bin/ddclient
       snapcraftctl prime
-    hooks:
-      plugin: dump
-      source: src/
-      organize:
-      hooks: snap/hooks
+  hooks:
+    plugin: dump
+    source: src/
+    organize:
+    hooks: snap/hooks
