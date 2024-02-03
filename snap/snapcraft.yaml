@@ -75,4 +75,4 @@ parts:
     plugin: dump
     source: src/
     organize:
-    hooks: snap/hooks
+      hooks: snap/hooks
