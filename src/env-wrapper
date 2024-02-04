@@ -5,7 +5,8 @@ REGEX="^.*[^doc]\/perl+(\-base|[0-9]+?\/[0-9\.]+)$"
 export PERL5LIB="${PERL5LIB}"
 for P in $(find $SNAP -type d -regextype posix-extended -regex "${REGEX}"); do
       if [[ ! "${PERL5LIB}" =~ "${P}" ]]; then
-	      logger "Add ${P} to PERL5lIB"
+	      PERL5LIB="${PERL5LIB}$([ -z "${PERL5LIB}" ] || ":")${P}"
+	      logger "PERL5LIB+=${P}"
       fi
 done
 logger "PERL5LIB: ${PERL5LIB}"
