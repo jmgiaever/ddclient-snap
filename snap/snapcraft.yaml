@@ -36,7 +36,7 @@ apps:
 
 layout:
   /usr/bin/curl:
-    bind-file: SNAP/usr/bin/curl
+    bind: $SNAP/usr/bin/curl
   /usr/local/etc/ddclient.conf:
     bind-file: $SNAP_DATA/ddclient.conf
   /usr/local/var/cache/ddclient/ddclient.cache:
