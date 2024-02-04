@@ -35,10 +35,10 @@ apps:
       - network
 
 layout:
-  #/usr/bin/curl:
-  #symlink: $SNAP/usr/bin/curl
+  /usr/bin/curl:
+    symlink: $SNAP/usr/bin/curl
   /usr/local/etc/ddclient.conf:
-    bind-file: $SNAP_DATA/ddclient.conf
+    symlink: $SNAP_DATA/ddclient.conf
   /usr/local/var/cache/ddclient/ddclient.cache:
     bind-file: $SNAP_COMMON/ddclient.cache
 
