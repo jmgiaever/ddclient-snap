@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
+cd $SNAP
 REGEX="^.*[^doc]\/perl+(\-base|[0-9]+?\/[0-9\.]+)$"
-
 export PERL5LIB="${PERL5LIB}"
 for P in $(find $SNAP -type d -regextype posix-extended -regex "${REGEX}"); do
       if [[ ! "${PERL5LIB}" =~ "${P}" ]]; then
