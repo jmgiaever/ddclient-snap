@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -a "${SNAP_DATA}/etc/ddclient/ddclient.conf" ]; then
-    logger "ddclient.conf (old) exists"
-    if [ -n "$(cat ${SNAP_DATA}/etc/ddclient/ddclient.conf)" ]; then
-	    logger "ddclient.conf (old) is not empty, copying to (new) ${SNAP_DATA}/ddclient.conf"
-        cat "${SNAP_DATA}/etc/ddclient/ddclient.conf" > "${SNAP_DATA}/ddclient.conf"
-    fi
+    logger "ddclient.conf (old) exists, copying to (new) ${SNAP_DATA}/ddclient.conf"
+    cat "${SNAP_DATA}/etc/ddclient/ddclient.conf" > "${SNAP_DATA}/ddclient.conf"
     rm -rf "${SNAP_DATA}/etc" "${SNAP_DATA}/var"
     logger "Remove /etc + /var in ${SNAP_DATA}"
 fi
