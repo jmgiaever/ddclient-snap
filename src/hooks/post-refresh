@@ -3,7 +3,7 @@
 logger "Refresh...."
 if [ -a "${SNAP_DATA}/etc/ddclient/ddclient.conf" ]; then
     logger "Yay, ddclient.conf (old) exists"
-    if [ -z "$(cat ${SNAP_DATA}/etc/ddclient/ddclient.conf)" ]; then
+    if [ -n "$(cat ${SNAP_DATA}/etc/ddclient/ddclient.conf)" ]; then
         cat "${SNAP_DATA}/etc/ddclient/ddclient.conf" > "${SNAP_DATA}/ddclient.conf"
     fi
     rm -rf "${SNAP_DATA}/etc" "${SNAP_DATA}/var"
