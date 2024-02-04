@@ -17,18 +17,20 @@ apps:
   ddclient-snap:
     environment:
       LC_ALL: "C.UTF-8"
-      PERL5LIB:  "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl-base/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl5/5.34/:$SNAP/usr/share/perl5/:$SNAP/usr/share/perl/5.34/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.34/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.34/"
       LD_LIBRARY_PATH: "$SNAP/usr/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio/:$LD_LIBRARY_PATH"
     command: usr/local/bin/ddclient --daemon 300 -foreground
+    command-chain:
+      - env-wrapper
     daemon: simple
     plugs:
       - network
   exec:
     environment:
       LC_ALL: "C.UTF-8"
-      PERL5LIB:  "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl-base/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl5/5.34/:$SNAP/usr/share/perl5/:$SNAP/usr/share/perl/5.34/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.34/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/perl/5.34/"
       LD_LIBRARY_PATH: "$SNAP/usr/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio/:$LD_LIBRARY_PATH"
     command: usr/local/bin/ddclient
+    command-chain:
+      - env-wrapper
     plugs:
       - network
 
