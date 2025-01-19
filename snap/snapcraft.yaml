@@ -1,6 +1,6 @@
 name: ddclient-snap
 base: core22
-version: 'v3.11.2'
+version: 'v4.0.0'
 summary: "Update dynamic DNS entries for accounts on dynamic DNS services."
 description: |
   Dynamic DNS services currently supported include: 
@@ -38,6 +38,8 @@ layout:
   /usr/bin/curl:
     symlink: $SNAP/usr/bin/curl
   /usr/local/etc/ddclient.conf:
+    symlink: $SNAP_DATA/ddclient.conf
+  /usr/local/etc/ddclient/ddclient.conf:
     symlink: $SNAP_DATA/ddclient.conf
   /usr/local/var/cache/ddclient/ddclient.cache:
     bind-file: $SNAP_COMMON/ddclient.cache
